@@ -2,7 +2,7 @@ from flask_sqlalchemy import SQLAlchemy
 
 db = SQLAlchemy()
 
-class Newsletter(db.Model):
+class Newsletter(db.Model):  # removes all serializer codes because marshmallow serialize all models
     __tablename__ = 'newsletters'
 
     id = db.Column(db.Integer, primary_key=True)
